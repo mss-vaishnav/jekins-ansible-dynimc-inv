@@ -1,15 +1,16 @@
 plugin: aws_ec2
 
-#aws_access_key: 
-#aws_secret_key: 
+#aws_access_key: AKIA3OVJTVL5RQEVFDVX
+#aws_secret_key: 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
 
 regions:
   - ap-southeast-1
+  - us-west-1
   - ap-south-1
 
 filters:
   instance-state-name : running
- 
+
 keyed_groups:
   - key: tags.Name
     prefix: ""
@@ -20,3 +21,4 @@ hostnames:
 
 compose:
   ansible_host: private_ip_address
+
